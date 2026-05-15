@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package analitica_seguridad;
+
+// Interfaz eficiente y bien tipificada para el motor de cálculo
+service MotorAnalitica {
+  
+  // 1. Solicita la distribución de frecuencias por Provincia
+  rpc ObtenerFrecuenciaProvincia (FiltroAnios) returns (RespuestaFrecuencias) {}
+  
+  // 2. Solicita la frecuencia de incidentes según el Tipo de Arma
+  rpc ObtenerFrecuenciaArma (FiltroAnios) returns (RespuestaFrecuencias) {}
+
+  // 3. Solicita el conteo total de casos por categoría (Homicidio, Asesinato, Sicariato y Femicidio)
+  rpc ObtenerAgregacionInicial (FiltroAnios) returns (RespuestaFrecuencias) {}
+
+  // 4. Solicita el resumen inicial de la tabla cargada para el Dashboard
+  rpc ObtenerResumenTabla (FiltroAnios) returns (RespuestaTabla) {}
+}
+
+// Mensaje de petición: incluye los selectores del rango de años definidos en Streamlit
+message FiltroAnios {
+  int32 anio_inicio = 1;
+  int32 anio_fin = 2;
+}
+
+// Mensaje para serializar cada par clave-valor de las frecuencias y agregaciones
+message ItemFrecuencia {
+  string categoria = 1; // Ej. "Pichincha" o "Arma de fuego"
+  int32 cantidad = 2;   // Ej. 150
+}
+
+// Respuesta que contiene la lista completa de frecuencias procesadas
+message RespuestaFrecuencias {
+  repeated ItemFrecuencia datos = 1;
+}
+
+// Respuesta estructurada para cargar el resumen inicial en el Dashboard
+message RespuestaTabla {
+  string json_dataframe = 1; // DataFrame serializado en JSON para fácil lectura en Pandas/Streamlit
+  int32 total_registros = 2; // Conteo de validación
+}

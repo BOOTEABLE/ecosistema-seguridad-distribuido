@@ -1,0 +1,11 @@
+# Ignorar bases de datos y archivos pesados
+data/*.xlsx
+data/*.csv
+
+# Ignorar cachés de Python
+__pycache__/
+*.py[cod]
+*$py.class
+# Ignorar configuraciones locales de SO
+.DS_Store
+Thumbs.db
