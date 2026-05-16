@@ -407,7 +407,13 @@ Este proyecto fue diseñado para demostrar competencias avanzadas en:
 
 ---
 
-# 👨‍💻 Autor
+# 👨‍💻 Autores
+
+David Alejandro Cruz Palacios
+Emily Mabel Ortega Constante
+Carlos José Pilatuña Roldan
+
+Estudiantes de Ingenieria en Ciencias de la Computación - Universidad Politécnica Salesiana (UPS)
 
 Proyecto desarrollado para analítica de datos en seguridad ciudadana y arquitecturas distribuidas orientadas a servicios.
 
