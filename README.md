@@ -409,9 +409,9 @@ Este proyecto fue diseñado para demostrar competencias avanzadas en:
 
 # 👨‍💻 Autores
 
-David Alejandro Cruz Palacios
-Emily Mabel Ortega Constante
-Carlos José Pilatuña Roldan
+- David Alejandro Cruz Palacios
+- Emily Mabel Ortega Constante
+- Carlos José Pilatuña Roldan
 
 Estudiantes de Ingenieria en Ciencias de la Computación - Universidad Politécnica Salesiana (UPS)
 
